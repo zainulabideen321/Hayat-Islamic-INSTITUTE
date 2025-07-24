@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat Islamic Institute | Professional Quran Teaching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #4caf50;
+            --cream: #f5f5dc;
+            --beige: #e6d2aa;
+            --gold: #daa520;
+            --white: #ffffff;
+            --dark-green: #1b5e20;
+            --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--cream);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f5f5dc"/><path d="M20,20 C40,10 60,10 80,20 C90,40 90,60 80,80 C60,90 40,90 20,80 C10,60 10,40 20,20 Z" fill="none" stroke="%23e6d2aa" stroke-width="0.5" opacity="0.2"/></svg>');
+        }
+
+        .arabic-font {
+            font-family: 'Amiri', serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Amiri', serif;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+       /* ========== HEADER BASE STYLES ========== */
+/* Header style */
+header {
+  background-color: var(--white);
+  box-shadow: var(--soft-shadow);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+/* Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  position: static;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--primary-green);
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-green);
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--gold);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-links a:hover:after {
+  width: 100%;
+}
+
+/* Hide underline from logo */
+.logo a::after {
+  display: none !important;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-green);
+  z-index: 1001;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Smooth dropdown animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231b5e20" opacity="0.1"/><path d="M10,50 Q30,30 50,50 T90,50" fill="none" stroke="%23daa520" stroke-width="0.5" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 10rem 0 5rem;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(218, 165, 32, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="none"/><path d="M30,100 C50,70 70,50 100,30 C130,50 150,70 170,100 C150,130 130,150 100,170 C70,150 50,130 30,100 Z" fill="none" stroke="%23e6d2aa" stroke-width="0.5" opacity="0.1"/></svg>');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .teacher-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+            background: linear-gradient(45deg, var(--beige), var(--cream));
+            padding: 1rem;
+        }
+
+        .teacher-image-placeholder {
+            height: 400px;
+            background: linear-gradient(135deg, var(--beige), var(--gold));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .teacher-info {
+            flex: 1;
+        }
+
+        .teacher-info h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .teacher-info h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-statement {
+            background-color: var(--cream);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 5px solid var(--gold);
+        }
+
+        /* Skills Section */
+        .skills {
+            background: linear-gradient(to bottom, var(--cream), var(--white));
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-item {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .skill-bar {
+            height: 12px;
+            background-color: var(--beige);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-green), var(--light-green));
+            border-radius: 6px;
+            position: relative;
+        }
+
+        /* Courses Section */
+        .courses {
+            background-color: var(--white);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background-color: var(--cream);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--beige);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-image {
+            height: 180px;
+            background: linear-gradient(45deg, var(--primary-green), var(--dark-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .course-content {
+            padding: 1.5rem;
+        }
+
+        .course-content h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--dark-green);
+        }
+
+        .course-meta span {
+            background-color: var(--beige);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .course-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 0.7rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .course-btn:hover {
+            background-color: var(--dark-green);
+            transform: scale(1.05);
+        }
+
+        /* Schedule Section */
+        .schedule {
+            background: linear-gradient(to bottom, var(--white), var(--cream));
+        }
+
+        .schedule-container {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--soft-shadow);
+            overflow: hidden;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .schedule-table th {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--beige);
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: var(--cream);
+        }
+
+        .schedule-notes {
+            padding: 1.5rem;
+            background-color: var(--beige);
+            color: var(--dark-green);
+            border-top: 3px solid var(--gold);
+        }
+
+        /* pricing table */
+         .pricing-table-wrapper {
+    overflow-x: auto;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid #1d3b30;
+    padding: 12px 15px;
+}
+
+.pricing-table thead {
+    background-color: #1d3b30;
+    color: white;
+    text-align: center;
+}
+
+.pricing-table th {
+    font-weight: bold;
+}
+
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(27, 94, 32, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%231b5e20" opacity="0.1"/><path d="M30,170 C50,150 70,130 100,130 C130,130 150,150 170,170" fill="none" stroke="%23daa520" stroke-width="0.5" opacity="0.1"/></svg>');
+            background-size: cover;
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .contact-info p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-form h3 {
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--beige);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .submit-btn {
+            background-color: var(--gold);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-green);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+      
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--beige);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(218, 165, 32, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(218, 165, 32, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(218, 165, 32, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .teacher-image, .teacher-info {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .schedule-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <!-- <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Hayat<span> Islamic Institute</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div> -->
+        <!-- Navbar -->
+<!-- <nav class="navbar">
+  <div class="logo">Hayat Quran Center</div>
+  <div class="menu-toggle" id="mobile-menu">
+    ☰
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+    </header> --> 
+  <header>
+  <div class="header-container">
+    <div class="logo">
+        <a href="#about">
+      <h1>Hayat<span> Islamic Institute</span></h1>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Learn Quran with Peace and Understanding</h1>
+            <p>Professional Quran teaching with Tajweed, Memorization, and Islamic Studies</p>
+            <a href="#courses" class="btn">Start Learning Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="teacher-image">
+                    <div class="teacher-image-placeholder">
+                        <i class="fas fa-user-tie fa-4x"></i>
+                        <div>Ustad salman <br>Quran Teacher</div>
+                    </div>
+                </div>
+                 <div class="teacher-info">
+                    <h2>Why Choose Hayat Islamic Institute?</h2>
+                    
+                      <p> <strong> Islamic Institute is a subtle way to learn or revise the Holy Quran from the sketch to the Tajweed theories. We dynamically offer various packages to learn the accurate Quran reading with proper pronunciation. We also provide the Tajweed classes to sharpen your Quranic skill</strong> </p>
+                </div>
+                </div> 
+                    <div class="mission-statement">
+                        <h4>Teaching Mission</h4>
+                        <p>"To empower students with Quranic knowledge and understanding, helping them build a strong spiritual connection with Allah through His divine words. I aim to make Quran learning accessible, meaningful and transformative for every student."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Teaching Expertise</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-title">
+                        <h4>Arabic Language</h4>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-title">
+                        <h4>Quran Memorisation</h4>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-title">
+                        <h4>Tajweed</h4>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-title">
+                        <h4>Islamic Studies</h4>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-title">
+                        <h4>Online Teaching</h4>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Courses Offered</h2>
+            </div>
+            <div class="courses-grid">
+                <!-- Course Card 1 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Noorani Qaida</h3>
+                        <p>Learn Arabic letters, pronunciation and basics of Quran reading with proper articulation.</p>
+                        <div class="course-meta">                     
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Nazra Quran</h3>
+                        <p>Fluent Quran reading with Tajweed rules applied. Build confidence in recitation.</p>
+                        <div class="course-meta">                     
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Course Card 3 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Hifz-e-Quran</h3>
+                        <p>Memorize the Quran with proper Tajweed and daily revision techniques.</p>
+                        <div class="course-meta">
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Tajweed Course</h3>
+                        <p>Master the rules of Quran recitation with practical examples and correction.</p>
+                        <div class="course-meta">                           
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Course Card 5 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Arabic Course</h3>
+                        <p>Learn spoken and written Arabic basics for understanding Quran and daily life.</p>
+                        <div class="course-meta">                      
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <!-- Course Card 6 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Masnoon Duain</h3>
+                        <p>Daily Duas with meanings, memorization techniques and practical application.</p>
+                        <div class="course-meta">                         
+                        </div>
+                        <a href="#contact" class="course-btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-title">
+                <h2>Class Timings</h2>
+            </div>
+            <div class="schedule-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Availability</th>
+                            <th>Platform</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>24 Hours (All Days)</td>
+                            <!-- <td>3:00 PM – 4:00 PM</td> -->
+                            <td>Zoom / WhatsApp</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="schedule-notes">
+                    <p><i class="fas fa-info-circle"></i> Flexible timings available for all time zones. Weekend classes also available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- price section -->
+   <section id="pricing" class="pricing">
+  <div class="container">
+    <div class="section-title">
+      <h2>Pricing Of Classes</h2>
+    </div>
+    <div class="pricing-table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Classes count</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1 Class in a Week<br>
+              total Classes of month 4
+            </td>
+            <td>$14</td>
+          </tr>
+          <tr>
+            <td>
+              2 Classes of Week<br>
+              total Classes of month 8
+            </td>
+            <td>$28</td>
+          </tr>
+          <tr>
+            <td>
+              3 Classes of Week<br>
+              total Classes of month 12
+            </td>
+            <td>$42</td>
+          </tr>
+          <tr>
+            <td>
+              4 Classes of Week<br>
+              total Classes of month 16
+            </td>
+            <td>$56</td>
+          </tr>
+          <tr>
+            <td>
+              Five Classes of Week<br>
+              total Classes of month 20
+            </td>
+            <td>$70</td>
+          </tr>
+          <tr>
+            <td>Six Classes</td>
+            <td>$84</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact & Enrollment</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get Started Today</h3>
+                  
+                    <p>I offer one-on-one online Quran classes tailored to your learning needs and schedule. Flexible timings are available for students worldwide.</p>
+                    <p><i class="fas fa-envelope"></i> hayatkhan03118349@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+923493704822 </p>
+                    <p><i class="fas fa-phone"></i>+923197969158 </p>
+                </div>
+   <!-- Contact Form -->
+<form action="https://formspree.io/f/xqalqkld" method="POST">
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+        <label for="course">Course Interested In</label>
+        <select id="course" name="course" required>
+            <option value="">Select a Course</option>
+            <option value="noorani">Noorani Qaida</option>
+            <option value="nazra">Nazra Quran</option>
+            <option value="hifz">Hifz-e-Quran</option>
+            <option value="tajweed">Tajweed Course</option>
+            <option value="arabic">Arabic Course</option>
+            <option value="duas">Masnoon Duain</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="time">Preferred Class Time</label>
+        <select id="time" name="time" required>
+            <option value="">Select Your Preferred Time</option>
+            <option value="anytime">Anytime (24/7 Available)</option>
+            <option value="custom">I will discuss timing with teacher</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="whatsapp">WhatsApp Number</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Include country code">
+    </div>
+    <button type="submit" class="submit-btn">Submit Application</button>
+</form>
+
+
+
+    <!-- Redirect after form submission -->
+    <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html">
+</div>
+
+     <a href="https://wa.me/923451234567" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Hayat Islamic Institute</div>
+                <p>Professional Quran Teaching with Tajweed, Memorization and Understanding</p>
+                <div class="copyright">
+                    © 2023 Hayat Islamic Institute. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for progress bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.skill-progress');
+            
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.transition = 'width 1.5s ease-in-out';
+                    bar.style.width = width;
+                }, 300);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
+        
+    </script>
+  
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
