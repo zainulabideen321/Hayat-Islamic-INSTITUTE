@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Hayat Islamic Institute | Professional Quran Teaching</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -236,70 +236,39 @@ header {
         }
 
         /* About Section */
-        .about {
-            background-color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
+        
+     */.about-content {
+    display: block; /* vertical layout for mobile or narrow screens */
+    padding: 2rem 1rem;
+    background: var(--cream);
+    border-radius: 10px;
+    box-shadow: var(--soft-shadow);
+    margin: 2rem 0;
+}
 
-        .about::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="none"/><path d="M30,100 C50,70 70,50 100,30 C130,50 150,70 170,100 C150,130 130,150 100,170 C70,150 50,130 30,100 Z" fill="none" stroke="%23e6d2aa" stroke-width="0.5" opacity="0.1"/></svg>');
-            background-size: cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
+.teacher-info {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-left: 5px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
 
-        .about-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
+.teacher-info h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
 
-        .teacher-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--soft-shadow);
-            background: linear-gradient(45deg, var(--beige), var(--cream));
-            padding: 1rem;
-        }
+.teacher-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
 
-        .teacher-image-placeholder {
-            height: 400px;
-            background: linear-gradient(135deg, var(--beige), var(--gold));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark-green);
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .teacher-info {
-            flex: 1;
-        }
-
-        .teacher-info h2 {
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 1.5rem;
-        }
-
-        .teacher-info h3 {
-            color: var(--gold);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
 
         .mission-statement {
             background-color: var(--cream);
@@ -600,6 +569,48 @@ header {
         .submit-btn:hover {
             background-color: var(--primary-green);
         }
+        /* platform logo */
+       .class-platforms {
+  text-align: center;
+  background-color: #f9f9f5;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.class-platforms h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #3a3a3a;
+  font-family: 'Amiri', serif; /* Arabic-feel font */
+}
+
+.class-platforms p {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.platform-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.platform-logos img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+  filter: grayscale(20%);
+}
+
+.platform-logos img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
 
         /* WhatsApp Button */
         .whatsapp-btn {
@@ -772,21 +783,27 @@ header {
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="teacher-image">
-                    <div class="teacher-image-placeholder">
-                        <i class="fas fa-user-tie fa-4x"></i>
-                        <div>Ustad salman <br>Quran Teacher</div>
-                    </div>
-                </div>
-                 <div class="teacher-info">
+     <section id="about" class="about">
+        
+                <div class="container">
+    <div class="about-content">
+        <div class="teacher-info">
+            <h2>Why Choose Hayat Islamic Institute?</h2>
+            <p><strong>
+                Hayat Islamic Institute is a subtle way to learn or revise the Holy Quran from the sketch to the Tajweed theories.
+                We dynamically offer various packages to learn the accurate Quran reading with proper pronunciation.
+                We also provide the Tajweed classes to sharpen your Quranic skill.
+            </strong></p>
+        </div>
+    </div>
+</div>
+
+                 <!-- <div class="teacher-info">
                     <h2>Why Choose Hayat Islamic Institute?</h2>
                     
                       <p> <strong>  Hayat Islamic Institute is a subtle way to learn or revise the Holy Quran from the sketch to the Tajweed theories. We dynamically offer various packages to learn the accurate Quran reading with proper pronunciation. We also provide the Tajweed classes to sharpen your Quranic skill</strong> </p>
                 </div>
-                </div> 
+                </div>  -->
                     <div class="mission-statement">
                         <h4>Teaching Mission</h4>
                         <p>"To empower students with Quranic knowledge and understanding, helping them build a strong spiritual connection with Allah through His divine words. I aim to make Quran learning accessible, meaningful and transformative for every student."</p>
@@ -806,50 +823,50 @@ header {
                 <div class="skill-item">
                     <div class="skill-title">
                         <h4>Arabic Language</h4>
-                        <span>95%</span>
+                        <span>100%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
+                        <div class="skill-progress" style="width: 100%"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-title">
                         <h4>Quran Memorisation</h4>
-                        <span>90%</span>
+                        <span>100%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
+                        <div class="skill-progress" style="width: 100%"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-title">
                         <h4>Tajweed</h4>
-                        <span>85%</span>
+                        <span>100%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-progress" style="width:100%"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-title">
                         <h4>Islamic Studies</h4>
-                        <span>80%</span>
+                        <span>100%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
+                        <div class="skill-progress" style="width: 100%"></div>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-title">
                         <h4>Online Teaching</h4>
-                        <span>90%</span>
+                        <span>100%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
+                        <div class="skill-progress" style="width: 100%"></div>
                     </div>
                 </div>
             </div>
@@ -999,39 +1016,39 @@ header {
               1 Class in a Week<br>
               total Classes of month 4
             </td>
-            <td>$14</td>
+            <td>$13</td>
           </tr>
           <tr>
             <td>
               2 Classes of Week<br>
               total Classes of month 8
             </td>
-            <td>$28</td>
+            <td>$26</td>
           </tr>
           <tr>
             <td>
               3 Classes of Week<br>
               total Classes of month 12
             </td>
-            <td>$42</td>
+            <td>$39</td>
           </tr>
           <tr>
             <td>
               4 Classes of Week<br>
               total Classes of month 16
             </td>
-            <td>$56</td>
+            <td>$52</td>
           </tr>
           <tr>
             <td>
               Five Classes of Week<br>
               total Classes of month 20
             </td>
-            <td>$70</td>
+            <td>$65</td>
           </tr>
           <tr>
             <td>Six Classes</td>
-            <td>$84</td>
+            <td>$78</td>
           </tr>
         </tbody>
       </table>
@@ -1055,7 +1072,21 @@ header {
                     <p><i class="fas fa-envelope"></i> hayatqurancenter@gmail.com</p>
                     <p><i class="fas fa-phone"></i>+923197969158 </p>
                     <p><i class="fas fa-phone"></i>+923493704822 </p>
-                </div>
+                    <!-- latform section -->
+
+  .<section class="class-platforms">
+  <h2>📡 Our Online Class Platforms</h2>
+  <p>
+    To ensure comfort and accessibility, our Quran classes are conducted online 
+    using trusted and secure platforms. You can attend from anywhere in the world.
+  </p>
+  <div class="platform-logos">
+    <img src="Zoom-App-Icon-2.png" alt="Zoom" title="Zoom" />
+    <img src="png-transparent-meet-google-camera-google-s-logo-icon.png" alt="Google Meet" title="Google Meet" />
+    <img src="microsoft-teams-png.webp" alt="Microsoft Teams" title="Microsoft Teams" />
+  </div>
+</section>
+</div>
    <!-- Contact Form -->
 <form action="https://formspree.io/f/xqalqkld" method="POST">
     <div class="form-group">
