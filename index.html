@@ -73,7 +73,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
 }
 
 /* Logo */
@@ -84,7 +84,7 @@ header {
 }
 
 .logo h1 {
-  font-size: 1.8rem;
+   font-size: 1.8rem; 
   margin: 0;
   color: var(--primary-green);
 }
@@ -92,6 +92,14 @@ header {
 .logo span {
   color: var(--gold);
 }
+
+.logo img {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+ 
+}
+
 
 /* Navigation Links */
 .nav-links {
@@ -185,6 +193,8 @@ header {
     transform: translateY(0);
   }
 }
+
+
 
 
 
@@ -753,12 +763,19 @@ header {
 <body>
     
 
-  <header>
+   <header>
   <div class="header-container">
-    <div class="logo">
-        <a href="#about">
-      <h1>Hayat<span> Islamic Institute</span></h1>
-    </div>
+    <!-- <div class="logo">
+        <a href="#about"> -->
+
+            <div class="logo">
+  <a href="#about">
+    <img src="logo.jpg" alt="Hayat Islamic Logo" />
+  </a>
+</div>
+
+      <!-- <h1>Hayat<span> Islamic Institute</span></h1>
+    </div> -->
     
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
@@ -957,6 +974,23 @@ header {
                         <a href="#contact" class="course-btn">Apply Now</a>
                     </div>
                 </div>
+                <!-- course card 7 -->
+               <div class="course-card">
+    <div class="course-image">
+        <i class="fas fa-book-open"></i>
+    </div>
+    <div class="course-content">
+        <h3>Islamic Story</h3>
+        <p>Engaging Islamic stories with moral lessons, Prophets’ journeys, and character-building insights for all ages.</p>
+        <div class="course-meta">                     
+        </div>
+        <a href="#contact" class="course-btn">Apply Now</a>
+    </div>
+</div>
+
+
+
+
             </div>
         </div>
     </section>
@@ -1099,8 +1133,9 @@ header {
             <option value="nazra">Nazra Quran</option>
             <option value="hifz">Hifz-e-Quran</option>
             <option value="tajweed">Tajweed Course</option>
-            <option value="arabic">Arabic Course</option>
+            <option value="arabic">Arabic Course</option>           
             <option value="duas">Masnoon Duain</option>
+            <option value="duas">Islamic Story</option>
         </select>
     </div>
     <div class="form-group">
